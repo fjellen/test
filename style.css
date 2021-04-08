@@ -1,0 +1,162 @@
+section {
+    margin-top: 2rem;
+}
+
+section+section {
+    margin-top: 4rem;
+}
+
+.head-section {
+    height: 400px;
+}
+
+.split {
+    display: flex;
+}
+
+.split-section {
+    flex: 1;
+}
+
+.split-section img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.split-section-size2 {
+    flex: 2;
+}
+
+.align-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer {
+    margin-top: 4rem;
+    height: 192px;
+    width: 100%;
+    color: white;
+}
+
+footer .container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(33%, auto));
+}
+
+footer a {
+    color: white;
+}
+
+a i, a img {
+    margin-right: 1rem;
+}
+
+a img {
+    width: 16px;
+}
+
+.footer-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-section:nth-of-type(2) {
+    justify-content: center;
+    text-align: center;
+}
+
+footer .footer-section:nth-of-type(2) i {
+    font-size: 0.8rem;
+}
+
+footer .footer-section:last-of-type i {
+    font-size: 3rem;
+}
+
+.footer-section+.footer-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 50%;
+    width: 1px;
+    background-color: white;
+}
+
+.banner-small {
+    width: 100%;
+    height: 192px;
+    background-image: url("david-rangel-4m7gmLNr3M0-unsplash.jpg");
+    background-size: cover;
+    opacity: 0.7;
+}
+
+/* desktop */
+@media (min-width: 753px) {
+    .head-section .split-section:nth-of-type(1) img {
+        display: none;
+    }
+}
+
+@media (max-width: 414px) {
+    footer .container {
+        grid-template-columns: auto;
+    }
+
+    footer .footer-section:first-of-type {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer a .bi, footer a img {
+        display: none;
+    }
+
+    footer .footer-section:nth-of-type(2), footer .footer-section:last-of-type {
+        display: none;
+    }
+}
+
+@media (max-width: 764px) {
+    footer .footer-section:nth-of-type(2) i {
+        font-size: 0.6rem;
+    }
+
+    footer .footer-section {
+        box-sizing: border-box;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+@media (max-width: 753px) {
+    .head-section .split-section:nth-of-type(2) {
+        display: none;
+    }
+
+    .head-section .split-section:nth-of-type(1) img {
+        float: right;
+        width: 128px;
+        margin-left: 2rem;
+    }
+}
+
+/* iphone 5 */
+@media (max-width: 320px) {
+    .head-section .split-section:nth-of-type(1) img {
+        display: none;
+    }
+}
